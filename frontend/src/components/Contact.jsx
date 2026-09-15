@@ -33,6 +33,7 @@ export const Contact = () => {
 
   return (
     <section id="contact" data-testid="contact-section" className="relative bg-[#FAF7FC] py-24 lg:py-32 scroll-mt-20 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 brand-pattern opacity-[0.06] [mask-image:radial-gradient(ellipse_at_bottom,black_30%,transparent_80%)]" />
       <div className="pointer-events-none absolute -top-24 end-[-6%] h-96 w-96 rounded-full bg-fuchsia-200/50 blur-[130px]" />
       <div className="pointer-events-none absolute bottom-0 start-[-6%] h-80 w-80 rounded-full bg-[#C5A16F]/15 blur-[120px]" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">

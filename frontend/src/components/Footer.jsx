@@ -9,6 +9,7 @@ export const Footer = () => {
   return (
     <footer data-testid="footer" className="relative bg-[#0d0512] pt-20 pb-10 overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 brand-pattern-light opacity-[0.045] [mask-image:linear-gradient(180deg,black,transparent)]" />
         <div className="absolute -top-24 start-1/4 h-72 w-72 rounded-full bg-fuchsia-600/10 blur-[120px]" />
         <div className="absolute inset-x-0 top-0 h-px bg-gradient-to-l from-transparent via-fuchsia-400/40 to-transparent" />
       </div>

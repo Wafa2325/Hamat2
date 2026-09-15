@@ -57,6 +57,7 @@ export const Portfolio = () => {
   return (
     <section id="work" data-testid="portfolio-section" className="relative bg-[#16091f] py-24 lg:py-32 scroll-mt-20 overflow-hidden">
       <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 brand-pattern-light opacity-[0.05]" />
         <div className="absolute -top-20 end-1/4 h-96 w-96 rounded-full bg-fuchsia-600/15 blur-[140px]" />
         <div className="absolute bottom-0 start-0 h-80 w-80 rounded-full bg-[#8A688A]/20 blur-[130px]" />
       </div>

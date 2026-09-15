@@ -9,6 +9,7 @@ export const Services = () => {
   const Arrow = lang === 'ar' ? ArrowLeft : ArrowRight;
   return (
     <section id="services" data-testid="services-section" className="relative bg-[#FAF7FC] py-24 lg:py-32 scroll-mt-20 overflow-hidden">
+      <div className="pointer-events-none absolute inset-0 brand-pattern opacity-[0.06] [mask-image:radial-gradient(ellipse_at_top,black_30%,transparent_80%)]" />
       <div className="pointer-events-none absolute -bottom-24 start-[-6%] h-96 w-96 rounded-full bg-[#C5A16F]/15 blur-[120px]" />
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <SectionHead eyebrow={t.services.eyebrow} title={t.services.title} intro={t.services.intro} />

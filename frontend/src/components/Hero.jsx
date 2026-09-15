@@ -10,6 +10,7 @@ export const Hero = () => {
   return (
     <section id="home" data-testid="hero-section" className="relative overflow-hidden bg-[#120818] pt-28 lg:pt-36 pb-20 lg:pb-28 scroll-mt-20">
       <div className="pointer-events-none absolute inset-0">
+        <div className="absolute inset-0 brand-pattern-light opacity-[0.05] [mask-image:linear-gradient(180deg,black,transparent_90%)]" />
         <div className="absolute -top-40 start-[-10%] h-[34rem] w-[34rem] rounded-full bg-[#8A688A]/30 blur-[140px]" />
         <div className="absolute top-1/3 end-[-12%] h-[30rem] w-[30rem] rounded-full bg-fuchsia-600/20 blur-[150px]" />
         <div className="absolute bottom-[-20%] start-1/3 h-[24rem] w-[24rem] rounded-full bg-[#C5A16F]/10 blur-[130px]" />

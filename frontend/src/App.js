@@ -14,12 +14,14 @@ import { WhyUs } from './components/WhyUs';
 import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { WhatsAppButton } from './components/WhatsAppButton';
+import { Preloader } from './components/Preloader';
 
 function App() {
   return (
     <LangProvider>
       <div className="App bg-[#120818]" data-testid="app-root">
         <Toaster position="top-center" richColors />
+        <Preloader />
         <Header />
         <main>
           <Hero />

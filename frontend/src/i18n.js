@@ -7,6 +7,7 @@ export const translations = {
       home: 'Home', about: 'About', services: 'Services', expertise: 'Expertise',
       work: 'Our Work', clients: 'Clients', whyus: 'Why Us', contact: 'Contact',
     },
+    preloader: { name: "Hamat Al-ebda'a Company" },
     hero: {
       badge: 'Event Management & Building Saudi Talent',
       titleA: 'Experience.',
@@ -159,6 +160,7 @@ export const translations = {
       home: 'الرئيسية', about: 'من نحن', services: 'خدماتنا', expertise: 'خبراتنا',
       work: 'أعمالنا', clients: 'عملاؤنا', whyus: 'لماذا نحن', contact: 'تواصل معنا',
     },
+    preloader: { name: 'شركة هامات الإبداع' },
     hero: {
       badge: 'إدارة الفعاليات وبناء الكوادر السعودية',
       titleA: 'تجربة.',
