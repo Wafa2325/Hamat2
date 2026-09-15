@@ -1,6 +1,6 @@
 import { ScanLine, Route, UtensilsCrossed, PenTool, CalendarRange, ArrowLeft, ArrowRight } from 'lucide-react';
 import { Reveal, SectionHead } from './Reveal';
-import { useLang } from '../i18n';
+import { useLang, scrollToSection } from '../i18n';
 
 const ICONS = [ScanLine, Route, UtensilsCrossed, PenTool, CalendarRange];
 
@@ -19,7 +19,11 @@ export const Services = () => {
               <Reveal key={s.title} delay={i * 0.07} className={i === 3 ? 'lg:col-start-1' : ''}>
                 <div
                   data-testid={`service-card-${i}`}
-                  className="group relative h-full overflow-hidden rounded-3xl border border-purple-100 bg-white p-8 shadow-[0_10px_36px_rgba(126,34,206,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_26px_60px_rgba(126,34,206,0.18)]"
+                  role="button"
+                  tabIndex={0}
+                  onClick={() => scrollToSection('work')}
+                  onKeyDown={(e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); scrollToSection('work'); } }}
+                  className="group relative h-full cursor-pointer overflow-hidden rounded-3xl border border-purple-100 bg-white p-8 text-start shadow-[0_10px_36px_rgba(126,34,206,0.08)] transition-all duration-500 hover:-translate-y-2 hover:shadow-[0_26px_60px_rgba(126,34,206,0.18)] focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-fuchsia-400"
                 >
                   <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-l from-[#8A688A] via-fuchsia-400 to-[#C5A16F] opacity-0 transition-opacity duration-500 group-hover:opacity-100" />
                   <div className="flex items-start justify-between">
@@ -32,9 +36,9 @@ export const Services = () => {
                   </div>
                   <h3 className="mt-6 text-lg sm:text-xl font-semibold text-[#2A1535]">{s.title}</h3>
                   <p className="mt-3 text-sm sm:text-base leading-relaxed text-[#6b5875]">{s.text}</p>
-                  <span className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-fuchsia-500 opacity-0 transition-all duration-500 group-hover:opacity-100">
+                  <span data-testid={`service-card-${i}-view-work`} className="mt-5 inline-flex items-center gap-1.5 text-xs font-bold uppercase tracking-wider text-fuchsia-500 opacity-0 transition-all duration-500 group-hover:opacity-100 group-focus-visible:opacity-100">
                     {t.hero.ctaWork}
-                    <Arrow className="h-3.5 w-3.5" />
+                    <Arrow className="h-3.5 w-3.5 transition-transform duration-300 group-hover:translate-x-1 rtl:group-hover:-translate-x-1" />
                   </span>
                 </div>
               </Reveal>

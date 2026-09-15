@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion';
-import { ArrowDownLeft, ArrowDownRight, Sparkles, Crown, PenTool, Play } from 'lucide-react';
+import { ArrowDownLeft, ArrowDownRight, Sparkles, Play } from 'lucide-react';
+import { HeroScene } from './HeroScene';
 import { useLang, scrollToSection } from '../i18n';
 
 export const Hero = () => {
@@ -92,36 +93,7 @@ export const Hero = () => {
             </motion.div>
           </div>
 
-          <motion.div
-            initial={{ opacity: 0, scale: 0.92, rotate: 2 }}
-            animate={{ opacity: 1, scale: 1, rotate: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
-            className="relative"
-            data-testid="hero-visual"
-          >
-            <div className="absolute -inset-6 rounded-[2.5rem] bg-gradient-to-tr from-fuchsia-500/25 via-[#8A688A]/20 to-[#C5A16F]/20 blur-2xl" />
-            <div className="animate-float relative overflow-hidden rounded-[2rem] border border-fuchsia-300/20 bg-white shadow-[0_40px_90px_rgba(10,4,18,0.6)]">
-              <img
-                src="/assets/hero-diorama.jpg"
-                alt="3D event experience diorama by Hamat Al-ebda'a"
-                className="h-auto w-full object-cover"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#16091f]/25 via-transparent to-transparent" />
-            </div>
-
-            <div className="animate-float-slow absolute -start-4 sm:-start-8 top-8 flex items-center gap-2.5 rounded-2xl border border-fuchsia-300/25 bg-[#1d0f2c]/90 px-4 py-3 shadow-xl backdrop-blur" data-testid="hero-float-stage">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-fuchsia-500/20 text-fuchsia-300"><Sparkles className="h-5 w-5" /></span>
-              <span className="text-xs font-semibold text-purple-100">{t.hero.float1}</span>
-            </div>
-            <div className="animate-float absolute -end-3 sm:-end-6 top-1/3 flex items-center gap-2.5 rounded-2xl border border-[#C5A16F]/30 bg-[#1d0f2c]/90 px-4 py-3 shadow-xl backdrop-blur" style={{ animationDelay: '1.2s' }} data-testid="hero-float-hospitality">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-[#C5A16F]/20 text-[#C5A16F]"><Crown className="h-5 w-5" /></span>
-              <span className="text-xs font-semibold text-purple-100">{t.hero.float2}</span>
-            </div>
-            <div className="animate-float-slow absolute -bottom-5 start-10 flex items-center gap-2.5 rounded-2xl border border-fuchsia-300/25 bg-[#1d0f2c]/90 px-4 py-3 shadow-xl backdrop-blur" style={{ animationDelay: '0.6s' }} data-testid="hero-float-identity">
-              <span className="flex h-9 w-9 items-center justify-center rounded-xl bg-purple-400/20 text-purple-300"><PenTool className="h-5 w-5" /></span>
-              <span className="text-xs font-semibold text-purple-100">{t.hero.float3}</span>
-            </div>
-          </motion.div>
+          <HeroScene />
         </div>
       </div>
     </section>

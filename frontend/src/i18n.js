@@ -82,6 +82,9 @@ export const translations = {
     },
     work: {
       eyebrow: 'Our Work',
+      view: 'View photo',
+      close: 'Close',
+      whatsapp: 'Chat on WhatsApp',
       title: 'Events & Entertainment',
       intro: 'We are proud of the events we have organized, which reflect our commitment to quality and excellence.',
       projects: [
@@ -231,6 +234,9 @@ export const translations = {
     },
     work: {
       eyebrow: 'أعمالنا',
+      view: 'عرض الصورة',
+      close: 'إغلاق',
+      whatsapp: 'تواصل عبر واتساب',
       title: 'الفعاليات والترفيه',
       intro: 'نفخر بالفعاليات التي قمنا بتنظيمها، والتي تعكس التزامنا بالجودة والتميز.',
       projects: [

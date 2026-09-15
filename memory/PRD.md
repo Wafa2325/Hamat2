@@ -30,8 +30,14 @@ Build a premium, creative, interactive-looking static one-page bilingual (EN def
 - Footer PDF download button (one click, verified HTTP 200)
 - Verified: EN + AR rendering, RTL flip, form submission in both languages, smooth scroll, no console errors (only platform telemetry)
 
+## Implemented (2026-09-15, round 2)
+- Hero: new interactive 3D scene (`HeroScene.jsx`) — generated brand-palette 3D event platform + balloons/spotlight/gold-star layers, mouse-tilt parallax (framer-motion springs), orbit rings, twinkling stars. Assets `public/assets/3d-*.webp` (chroma-keyed to transparent).
+- Services cards: clickable ("View Our Work" → smooth-scrolls to #work), keyboard accessible.
+- Our Work: photos no longer crop people — blurred-fill background + `object-contain`; letterboxed LePure photo cropped to content; click-to-open lightbox (Esc/backdrop/close button).
+- Floating WhatsApp button (wa.me/966569969513), bilingual label.
+
 ## Backlog / Next
 - P0: none
-- P1: Email notification on contact form (Resend integration), WhatsApp click-to-chat
+- P1: Email notification on contact form (needs Resend API key)
 - P1: Replace text client badges with official logo files if provided
-- P2: Project detail modals with photo galleries, Google Maps embed for office location, SEO/OpenGraph tags
+- P2: Multi-photo galleries per project (needs more photos), Google Maps embed, SEO/OpenGraph tags

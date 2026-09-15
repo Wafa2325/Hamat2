@@ -42,6 +42,19 @@ body {
   animation: float 7s ease-in-out infinite;
 }
 
+@keyframes orbit {
+  from { transform: rotateX(70deg) rotateZ(0deg); }
+  to { transform: rotateX(70deg) rotateZ(360deg); }
+}
+.animate-spin-slow { animation: orbit 28s linear infinite; }
+.animate-spin-slower { animation: orbit 44s linear infinite reverse; }
+
+@keyframes twinkle {
+  0%, 100% { transform: scale(1) rotate(0deg); opacity: 0.85; filter: drop-shadow(0 0 4px rgba(197,161,111,0.4)); }
+  50% { transform: scale(1.25) rotate(20deg); opacity: 1; filter: drop-shadow(0 0 14px rgba(197,161,111,0.9)); }
+}
+.animate-twinkle { animation: twinkle 3.2s ease-in-out infinite; }
+
 @keyframes marquee {
   from { transform: translateX(0); }
   to { transform: translateX(-50%); }
