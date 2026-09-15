@@ -45,6 +45,8 @@ Build a premium, creative, interactive-looking static one-page bilingual (EN def
 
 - City Walk photo (Contact section) upscaled/enhanced 682→1264px (AI enhance of the same photo, content unchanged); original kept in memory/assets_src.
 
+- Pink + Hattrick client badges rebuilt from full source logos (were clipped by the circle); verified in /app/test_reports/iteration_2.json.
+
 ## Backlog / Next
 - P0: none
 - P1: Email notification on contact form (needs Resend API key)
