@@ -1,0 +1,36 @@
+{
+  "summary": "Frontend regression for Hamat Al-ebda'a landing page (Preloader, 3D Hero, Services, Portfolio, Clients marquee, WhatsApp, Footer, AR/RTL) plus POST /api/contact backend regression. All targeted flows are working. WebGL canvas is rendered (no fallback needed in the preview headless Chromium).",
+  "backend_issues": {
+    "critical": [],
+    "minor": []
+  },
+  "frontend_issues": {
+    "ui_bugs": [],
+    "integration_issues": [],
+    "design_issues": []
+  },
+  "test_report_links": [],
+  "action_items": [],
+  "critical_code_review_comments": [
+    "Preloader.jsx: document.body.style.overflow is set via inline style with a cleanup that always resets to ''. Because effect deps are [done] the cleanup runs on toggle only; fine, but any parent unmount race could leave body scroll locked. Currently confirmed 'visible' after preloader detach so no user-visible issue.",
+    "Preloader duration is 2200ms + 350ms + 700ms exit = ~3.25s of blocking scroll. Consider reducing on repeat visits (sessionStorage) so the preloader doesn't run on every hard reload."
+  ],
+  "updated_files": [],
+  "success_rate": {"backend": "100%", "frontend": "100%"},
+  "test_credentials": "n/a - public site",
+  "seed_data_creation": "One TEST_ contact message posted to /api/contact for regression (id cf9eb110-...); safe to leave.",
+  "retest_needed": false,
+  "main_agent_can_self_test": true,
+  "context_for_next_testing_agent": "When probing preloader inner testids via document.querySelector, use QUOTED attribute values ('[data-testid=\"preloader-logo\"]'). Unquoted worked for the parent but returned null for hyphenated inner ids inside evaluate() in this env. Playwright's own wait_for_selector handles unquoted fine. Preloader lifetime is ~2.5-3s; grab inner elements immediately after wait_for_selector matches, they disappear at 100% + fade. All 16 client logo images return HTTP 200 (verified via curl); f1-stc.png reported naturalWidth=0 in first snapshot because the marquee element was still off-screen/not yet loaded — retest with scroll_into_view (though marquee element is not stable due to animation).",
+  "detailed_checks": {
+    "preloader": "visible on cold load; logo/company-name='Hamat Al-ebda\\'a Company'/progress-bar/percentage all present; percentage reached 100%; detached within ~3s; body overflow restored to 'visible'; window scrollable after.",
+    "hero": "hero-visual, hero-3d-stage present; <canvas> rendered (WebGL available in headless); no <img> fallback path taken; three float badges (stage, hospitality, identity) all present. No React error overlay, no console errors observed.",
+    "services": "service-card-0-view-work becomes visible on hover; click smooth-scrolls to #work (top ~79px, near sticky header).",
+    "portfolio": "portfolio-card-0-open-button opens portfolio-lightbox with portfolio-lightbox-image; both ESC key and close-button dismiss the lightbox (verified detached).",
+    "clients": "clients-marquee-wall present; all 16 expected client-logo-<id> testids (dakar, dct, sgs, jeddah-superdome, mazda, f1-stc, aone, shadow, 360live, fiba3x3, tamam, altamayoz-academy, pink, pioneer-ideas, archidot, hattrick) render; all /assets/clients/<id>.png return HTTP 200.",
+    "whatsapp": "whatsapp-float-button href=https://wa.me/966569969513, target=_blank.",
+    "footer_pdf": "footer-download-company-profile-button href=/hamat-al-ebdaa-company-profile.pdf, HTTP 200.",
+    "arabic_switch": "Clicking 'العربية' toggles document.dir to 'rtl'; preloader does NOT re-appear on switch (only shows on load); Arabic UI renders without layout break (screenshot verified).",
+    "backend_contact": "POST /api/contact with valid payload {full_name,email,phone,message} returns 200 with UUID id and ISO created_at. Field is 'full_name' (not 'name'); frontend appears to already use the correct field per unchanged spec."
+  }
+}

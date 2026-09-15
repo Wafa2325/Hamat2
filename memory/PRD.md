@@ -36,6 +36,13 @@ Build a premium, creative, interactive-looking static one-page bilingual (EN def
 - Our Work: photos no longer crop people — blurred-fill background + `object-contain`; letterboxed LePure photo cropped to content; click-to-open lightbox (Esc/backdrop/close button).
 - Floating WhatsApp button (wa.me/966569969513), bilingual label.
 
+## Implemented (2026-09-15, round 3)
+- Preloader (`Preloader.jsx`): full-screen intro before site — white logo, "شركة هامات الإبداع" / "Hamat Al-ebda'a Company", gold→fuchsia progress line, 0–100% counter, fade-out (~2.5s), brand grid + pattern bg.
+- Hero 3D rebuilt as a real WebGL scene (`Stage3D.jsx`, react-three-fiber + postprocessing Bloom): wireframe/glass neon stage on a slab — LED screen shader, gold truss, moving spotlight beams, glowing crowd points, confetti, orbit rings; mouse parallax + auto-rotate; `<img>` fallback when WebGL missing. Deps: three, @react-three/fiber, @react-three/postprocessing (drei skipped: needs Node 22).
+- Brand logo-mark pattern: mark vectorized to SVG (`public/assets/mark.svg`), tiled via CSS classes `.brand-pattern` / `.brand-pattern-light` (inline data-URI) on Hero, Services, Our Work, Clients, Contact, Footer, Preloader.
+- Clients: 16 real logos extracted at 300dpi from profile PDF page 12 → `public/assets/clients/*.png`, circular badges (purple ring / gold ring like the profile), marquee pauses on hover, name tooltip.
+- Tested by testing agent: /app/test_reports/iteration_1.json — 100% pass.
+
 ## Backlog / Next
 - P0: none
 - P1: Email notification on contact form (needs Resend API key)

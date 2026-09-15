@@ -7,7 +7,7 @@ const PURPLE = '#8A688A';
 const PINK = '#e879f9';
 const GOLD = '#C5A16F';
 
-const GlassBox = ({ size, position, color = PURPLE, edge = PINK, opacity = 0.28, emissive = 0.15 }) => {
+const GlassBox = ({ size, position, color = PURPLE, edge = PINK, opacity = 0.42, emissive = 0.35 }) => {
   const geo = useMemo(() => new THREE.BoxGeometry(...size), [size]);
   const edges = useMemo(() => new THREE.EdgesGeometry(geo), [geo]);
   return (
@@ -35,8 +35,8 @@ const Screen = () => {
         vec3 a = vec3(0.91,0.47,0.98); vec3 b = vec3(0.77,0.63,0.44); vec3 c = vec3(0.54,0.41,0.54);
         vec3 col = mix(mix(c,a,w), b, v*0.55);
         float grid = step(0.92, fract(vUv.x*24.0)) + step(0.92, fract(vUv.y*14.0));
-        col += grid*0.25;
-        gl_FragColor = vec4(col*0.85, 0.95);
+        col += grid*0.12;
+        gl_FragColor = vec4(col*0.6, 0.95);
       }`,
   }), []);
   return (
