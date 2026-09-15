@@ -43,6 +43,8 @@ Build a premium, creative, interactive-looking static one-page bilingual (EN def
 - Clients: 16 real logos extracted at 300dpi from profile PDF page 12 → `public/assets/clients/*.png`, circular badges (purple ring / gold ring like the profile), marquee pauses on hover, name tooltip.
 - Tested by testing agent: /app/test_reports/iteration_1.json — 100% pass.
 
+- City Walk photo (Contact section) upscaled/enhanced 682→1264px (AI enhance of the same photo, content unchanged); original kept in memory/assets_src.
+
 ## Backlog / Next
 - P0: none
 - P1: Email notification on contact form (needs Resend API key)
