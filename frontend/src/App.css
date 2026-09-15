@@ -1,0 +1,61 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Red Hat Display', 'Cairo', sans-serif;
+  background-color: #120818;
+}
+
+[dir='rtl'] body,
+[dir='rtl'] button,
+[dir='rtl'] input,
+[dir='rtl'] select,
+[dir='rtl'] textarea {
+  font-family: 'Cairo', 'Red Hat Display', sans-serif;
+}
+
+::selection {
+  background: rgba(192, 132, 252, 0.35);
+  color: #fff;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #16091f;
+}
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(#8a688a, #a855f7);
+  border-radius: 8px;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+.animate-float {
+  animation: float 5s ease-in-out infinite;
+}
+.animate-float-slow {
+  animation: float 7s ease-in-out infinite;
+}
+
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+.animate-marquee {
+  animation: marquee 55s linear infinite;
+}
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+[dir='rtl'] .animate-marquee {
+  animation-name: marquee-rtl;
+}
+@keyframes marquee-rtl {
+  from { transform: translateX(0); }
+  to { transform: translateX(50%); }
+}

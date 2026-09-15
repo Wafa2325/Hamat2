@@ -1,0 +1,37 @@
+# PRD — Hamat Al-ebda'a (هامات الإبداع) Landing Page
+
+## Original Problem Statement
+Build a premium, creative, interactive-looking static one-page bilingual (EN default / العربية RTL) landing page for Hamat Al-ebda'a, a Saudi event management company. Content strictly from the attached Company Profile PDF; visual identity strictly from the Brand Guidelines PDF (dusty purple #8A688A, charcoal, warm gold #C5A16F; Red Hat Display EN / Cairo AR fonts; tagline "Experience. Inspire. Succeed."). No search bar. Contact nav item scrolls to contact form. Company Profile PDF download button in footer. Updated email: entertainment@hamatalebdaa.com.
+
+## Architecture
+- Frontend: React 19 + Tailwind + framer-motion + lucide-react + sonner. Single-page, section-based with smooth scroll.
+- Backend: FastAPI, `/api/contact` POST/GET (MongoDB `contact_messages`), `/api/status` (template).
+- Assets: Real logo extracted from brand guidelines (transparent purple + white variants in `public/assets/`), real project/event photos extracted from company profile PDF, 3D isometric event dioramas from the PDF used as hero/about visuals. Company profile PDF served at `/hamat-al-ebdaa-company-profile.pdf`.
+- i18n: `src/i18n.js` — LangProvider with full EN/AR translations (exact profile wording), sets `document.dir` for RTL.
+
+## User Personas
+- Corporate/government event buyer evaluating the company
+- Potential partner/sponsor
+- Arabic-first Saudi visitor (RTL)
+
+## Core Requirements (static)
+1. One-page static site, smooth-scroll nav: Home, About, Services, Expertise, Our Work, Clients, Why Us, Contact
+2. EN default + العربية switcher in header with full RTL
+3. Hero with 3D event-inspired visual + CTAs (Contact Us / View Our Work)
+4. Sections with exact profile content: Who We Are, Vision & Mission, Values (5), Services (5), Goals (3), Team Expertise (10), Our Work (4 projects), Clients/Partners, Why Us (4), Contact form
+5. Footer: logo, quick links, contact info, social, Download Company Profile button
+6. No search bar anywhere
+
+## Implemented (2026-09-15)
+- Full bilingual one-page site with all 11 sections + footer, exact profile copy EN/AR
+- Brand-authentic assets: transparent logo variants, real photos (SGS/LePure/Mazda/Pink Cup), mauve 3D dioramas
+- Contact form wired to backend `/api/contact` (saved in MongoDB, sonner toast feedback)
+- Clients marquee (17 real clients/partners from profile)
+- Footer PDF download button (one click, verified HTTP 200)
+- Verified: EN + AR rendering, RTL flip, form submission in both languages, smooth scroll, no console errors (only platform telemetry)
+
+## Backlog / Next
+- P0: none
+- P1: Email notification on contact form (Resend integration), WhatsApp click-to-chat
+- P1: Replace text client badges with official logo files if provided
+- P2: Project detail modals with photo galleries, Google Maps embed for office location, SEO/OpenGraph tags

@@ -1,0 +1,188 @@
+{
+  "project_name": "Hamat Al-ebda'a (هامات الإبداع)",
+  "app_type": "landing_page",
+  "archetype": "LUXURY & CREATIVE PERFORMANCE PRO",
+  "theme_strategy": {
+    "default_language": "en",
+    "supported_languages": ["en", "ar"],
+    "rtl_support": true,
+    "theme_balance": "Vibrant dark purple backdrop with alternating warm off-white sections to ensure life, energy, and luxury without gloomy or depressing tones."
+  },
+  "typography": {
+    "fonts": {
+      "heading_en": "Outfit, sans-serif",
+      "heading_ar": "Cairo, sans-serif",
+      "body_en": "Plus Jakarta Sans, sans-serif",
+      "body_ar": "Tajawal, sans-serif"
+    },
+    "hierarchy": {
+      "hero_h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight",
+      "section_h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight",
+      "subsection_h3": "text-xl sm:text-2xl font-semibold",
+      "card_title": "text-lg sm:text-xl font-semibold",
+      "body_text": "text-base sm:text-lg leading-relaxed",
+      "caption": "text-xs sm:text-sm uppercase tracking-widest font-medium"
+    }
+  },
+  "colors": {
+    "primary_dark_bg": "#0F0716",
+    "secondary_dark_bg": "#180D26",
+    "surface_dark": "#231238",
+    "light_section_bg": "#FAF5FF",
+    "light_surface": "#FFFFFF",
+    "brand_purple": "#A855F7",
+    "brand_lavender": "#C084FC",
+    "neon_mauve": "#E879F9",
+    "deep_violet": "#7E22CE",
+    "warm_amber_highlight": "#F59E0B",
+    "text_dark_theme": {
+      "primary": "#FAF5FF",
+      "secondary": "#E9D5FF",
+      "muted": "#A855F7"
+    },
+    "text_light_theme": {
+      "primary": "#1E1B4B",
+      "secondary": "#4B5563",
+      "muted": "#6B21A8"
+    },
+    "borders": {
+      "dark": "rgba(192, 132, 252, 0.2)",
+      "light": "rgba(168, 85, 247, 0.15)"
+    }
+  },
+  "visual_enhancers": {
+    "glassmorphism": "backdrop-blur-xl bg-purple-950/40 border border-purple-500/20 shadow-[0_8px_32px_rgba(15,7,22,0.37)]",
+    "light_card_shadow": "shadow-[0_10px_30px_rgba(126,34,206,0.08)] border border-purple-100",
+    "glow_effect": "shadow-[0_0_30px_rgba(168,85,247,0.35)]",
+    "section_dividers": "Subtle angled cuts, glowing ambient light drops, and micro-grid background overlays"
+  },
+  "3d_and_motion": {
+    "hero_visual": "Three.js / React Three Fiber ambient canvas featuring interactive floating 3D stage frames, rotating geometric spotlight beams, and gentle mauve particle fields.",
+    "scroll_library": "Lenis smooth scroll for weighted momentum scrolling.",
+    "framer_motion": "Staggered fade-up entrances, hover elevation scale (1.03x), and smooth tab transitions."
+  },
+  "layout_sections": [
+    {
+      "section_id": "header",
+      "name": "Header Navigation",
+      "description": "Sticky glassmorphic navbar with logo (Hamat Al-ebda'a), smooth scroll links (Home, About, Services, Expertise, Our Work, Clients, Why Us, Contact), bilingual switcher (EN/العربية), and CTA button. STRICTLY NO search bar/icon.",
+      "test_ids": {
+        "nav_container": "header-nav-container",
+        "logo": "header-brand-logo",
+        "lang_switcher": "header-lang-switcher-button",
+        "cta_button": "header-cta-get-in-touch"
+      }
+    },
+    {
+      "section_id": "hero",
+      "name": "Hero Section",
+      "description": "High-impact visual section with 3D stage light environment, energetic headline ('Where Vision Meets Extraordinary Staging'), supporting bilingual narrative, dual action buttons ('Contact Us' & 'View Our Work'), and live achievement metrics ticker (150+ Events, 50k+ Attendees, 99.8% Precision).",
+      "test_ids": {
+        "cta_contact": "hero-cta-contact-button",
+        "cta_portfolio": "hero-cta-portfolio-button",
+        "metrics_container": "hero-metrics-ticker"
+      }
+    },
+    {
+      "section_id": "about",
+      "name": "Who We Are & Vision/Mission",
+      "description": "Asymmetrical layout showcasing company story, grand vision, mission statement, and 5 interactive Core Value cards: Innovation, Excellence, Royalty Hospitality, Uncompromising Precision, Brand Identity.",
+      "test_ids": {
+        "value_card_prefix": "value-card-"
+      }
+    },
+    {
+      "section_id": "services",
+      "name": "Our Services",
+      "description": "5 interactive service cards with hover glow, icon badge, detailed deliverables, and imagery: 1. Event Management & Operations, 2. Exhibitions & Custom Staging, 3. Mega Entertainment Events, 4. VIP Hospitality & Protocol, 5. Logistics & Event Identity Design.",
+      "test_ids": {
+        "service_card_prefix": "service-card-"
+      }
+    },
+    {
+      "section_id": "goals",
+      "name": "Our Goals",
+      "description": "3 strategic goals highlighting global standard execution, immersive scenography, and seamless operational flow.",
+      "test_ids": {
+        "goal_card_prefix": "goal-card-"
+      }
+    },
+    {
+      "section_id": "expertise",
+      "name": "Team Expertise",
+      "description": "10 interactive skill capsules showcasing capabilities: Lighting Design, Crowd Dynamics, Audio Engineering, VIP Protocol, 3D Scenography, Stage Architecture, Live Broadcast Logistics, Guest Journey Mapping, Brand Signage, Vendor Orchestration.",
+      "test_ids": {
+        "expertise_grid": "team-expertise-grid",
+        "expertise_item_prefix": "expertise-item-"
+      }
+    },
+    {
+      "section_id": "portfolio",
+      "name": "Our Work (Portfolio)",
+      "description": "4 detailed project case-study cards with interactive modal popup, challenge/solution highlights, imagery, and results: 1. Cruise Event SGS, 2. Cruise Event LePure, 3. Mazda League 20 Years, 4. Pink Cup Opening Ceremony.",
+      "test_ids": {
+        "project_card_prefix": "portfolio-card-",
+        "project_modal": "portfolio-modal-dialog"
+      }
+    },
+    {
+      "section_id": "clients",
+      "name": "Partners & Clients Logo Wall",
+      "description": "Infinite smooth marquee showing prestigious clients & corporate partners (SGS, LePure, Mazda, Red Sea Global, Saudi Tourism Authority, Ministry of Culture, General Entertainment Authority).",
+      "test_ids": {
+        "marquee_container": "clients-marquee-wall"
+      }
+    },
+    {
+      "section_id": "why_us",
+      "name": "Why Choose Us",
+      "description": "4 key differentiator cards highlighting Turnkey Execution, 3D Pre-Visualization, 99.8% On-Time Record, and Bespoke VIP Hospitality.",
+      "test_ids": {
+        "why_us_prefix": "why-us-card-"
+      }
+    },
+    {
+      "section_id": "contact",
+      "name": "Contact Section",
+      "description": "Premium glassmorphism interactive form with Full Name, Company Name, Email, Phone, Type of Inquiry (Select: Event Management, Exhibition Staging, VIP Hospitality, Brand Identity, General Inquiry), Message box, and Send button with Sonner toast feedback.",
+      "test_ids": {
+        "form": "contact-form",
+        "input_fullname": "contact-input-fullname",
+        "input_company": "contact-input-company",
+        "input_email": "contact-input-email",
+        "input_phone": "contact-input-phone",
+        "select_inquiry": "contact-select-inquiry-type",
+        "input_message": "contact-input-message",
+        "submit_button": "contact-submit-button"
+      }
+    },
+    {
+      "section_id": "footer",
+      "name": "Footer & Company Profile Download",
+      "description": "Rich footer with brand logo, quick links, contact details (Riyadh & Jeddah offices, email, phone), social media links, copyright, and 'Download Company Profile' CTA button.",
+      "test_ids": {
+        "download_profile_button": "footer-download-company-profile-button"
+      }
+    }
+  ],
+  "image_urls": {
+    "hero_stage_bg": "https://images.unsplash.com/photo-1576514129883-2f1d47a65da6?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "exhibition_lighting": "https://images.unsplash.com/photo-1580751565620-a46e24e97eda?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "corporate_gala": "https://images.unsplash.com/photo-1700514077430-3659e38eb5e7?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "hospitality_decor": "https://images.unsplash.com/photo-1653821355736-0c2598d0a63e?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "concert_crowd": "https://images.unsplash.com/photo-1730134322176-862f1cf9bc9f?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "portfolio_cruise_sgs": "https://images.unsplash.com/photo-1563700816155-1d613ba479f2?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "portfolio_cruise_lepure": "https://images.unsplash.com/photo-1775874045630-80eaf52d20b5?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "portfolio_mazda_league": "https://images.unsplash.com/photo-1703379609481-02a4fc1c4160?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "portfolio_pink_cup": "https://images.unsplash.com/photo-1520242739010-44e95bde329e?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Build the one-page app in standard React (.js files) using Tailwind CSS and Radix/Lucide icons.",
+    "Do NOT include any search bar or search icon in the header or anywhere else on the page.",
+    "Implement bilingual state toggle (EN / AR) that updates text content smoothly and toggles dir='rtl' on the container element for proper Arabic layout flow.",
+    "Use Three.js / React Three Fiber for a floating 3D stage geometry visual in the Hero background.",
+    "Ensure section balance: dark purple hero & services, soft off-white mauve about & portfolio cards, creating high contrast and dynamic rhythm without gloom.",
+    "Every interactive element (inputs, buttons, cards, language switch, profile download) MUST have its designated data-testid attribute.",
+    "Use sonner for toast notifications on contact form submission and company profile download button."
+  ]
+}
