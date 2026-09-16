@@ -54,6 +54,10 @@ Build a premium, creative, interactive-looking static one-page bilingual (EN def
 - Logo replaced everywhere (Header, Footer, Preloader) with new brand logo `public/assets/logo-hamat-new.png` (white-bg logo placed in a white rounded chip so it stays legible on dark surfaces; logo used as-is, unmodified).
 - Verified: /app/test_reports/iteration_3.json — frontend 100% pass, EN/AR both, no 404s/console errors.
 
+## Implemented (2026-06, round 5 — logo + restore projects)
+- Logo changed to an all-WHITE, transparent-background mark (`public/assets/logo-hamat-white.png`, recolored from the brand logo). Used directly (no white chip) in Header, Footer, Preloader — consistent on all dark surfaces.
+- Our Work restored the 3 previously-removed projects (Cruise – SGS, Cruise – Le Pure, Mazda League: 20 Years) alongside the 6 new ones → **9 projects total**, 3×3 grid. New landscape covers `portfolio/{sgs,lepure,mazda}-cover.jpg`. Text/titles taken from the client profile (EN+AR).
+
 ## Backlog / Next
 - P0: none
 - P1: Email notification on contact form (needs Resend API key) — STILL PENDING (contact form only saves to MongoDB)

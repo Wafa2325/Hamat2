@@ -99,6 +99,9 @@ export const translations = {
         { title: 'JAHEZ Event', category: 'Brand Activation', text: 'We delivered a lively brand activation for JAHEZ, coordinating staffing, hospitality, and an engaging on-site experience for families and fans.' },
         { title: 'Ittihad Fan Zone', category: 'Sports Fan Zone', text: 'We built and operated the Ittihad Fan Zone, creating an interactive space for fans with themed installations and memorable activities.' },
         { title: 'Al-Ahli Match', category: 'Sports Event', text: 'We handled reception, protocol, and VIP hospitality for the Al-Ahli match, ensuring a refined and well-organized matchday experience.' },
+        { title: 'Cruise Event – SGS Company', category: 'Cruise Experience', text: 'In collaboration with SGS, we delivered end-to-end crowd management and passenger handling services, ensuring a seamless, safe, and efficient cruise guest experience.' },
+        { title: 'Cruise Event – Le Pure Company', category: 'Cruise Experience', text: 'Organizing visitor reception and attendance management at the Cruise Event in cooperation with Le Pure.' },
+        { title: 'Mazda League: 20 Years of Success', category: 'Sports Event', text: 'Organizing the Mazda League from the start of the project until its end, with ongoing success and excellence for 20 consecutive years.' },
       ],
     },
     clients: {
@@ -261,6 +264,9 @@ export const translations = {
         { title: 'فعالية جاهز', category: 'تفعيل العلامة التجارية', text: 'قدّمنا تفعيلًا حيويًا لعلامة جاهز، بتنسيق الكوادر والضيافة وتجربة ميدانية ممتعة للعائلات والزوار.' },
         { title: 'منطقة جماهير الاتحاد', category: 'منطقة جماهير رياضية', text: 'أنشأنا وأدرنا منطقة جماهير نادي الاتحاد، وابتكرنا مساحة تفاعلية للمشجعين بتجهيزات مميزة وأنشطة لا تُنسى.' },
         { title: 'مباراة الأهلي', category: 'فعالية رياضية', text: 'تولّينا الاستقبال والمراسم وضيافة كبار الشخصيات في مباراة الأهلي، لضمان تجربة راقية ومنظمة ليوم المباراة.' },
+        { title: 'فعالية الرحلة البحرية – شركة SGS', category: 'تجربة بحرية', text: 'بالتعاون مع شركة SGS، قدمنا خدمات متكاملة لإدارة الحشود وخدمة المسافرين، بما يضمن تجربة سلسة وآمنة وفعّالة لضيوف الرحلات البحرية.' },
+        { title: 'فعالية الرحلة البحرية – شركة Le Pure', category: 'تجربة بحرية', text: 'تنظيم استقبال الزوار وإدارة الحضور في حدث السفينة السياحية بالتعاون مع Le Pure.' },
+        { title: 'دوري مازدا: 20 عامًا من النجاح', category: 'فعالية رياضية', text: 'تنظيم دوري مازدا منذ بداية المشروع وحتى نهايته، مع نجاح مستمر وتميز لمدة 20 سنة متتالية.' },
       ],
     },
     clients: {

@@ -39,9 +39,7 @@ export const Header = () => {
             className="flex items-center shrink-0"
             aria-label="Hamat Al-ebda'a home"
           >
-            <span className="flex items-center justify-center rounded-2xl bg-white p-1.5 shadow-[0_6px_20px_rgba(0,0,0,0.25)]">
-              <img src="/assets/logo-hamat-new.png" alt="Hamat Al-ebda'a" className="h-10 lg:h-12 w-auto" />
-            </span>
+            <img src="/assets/logo-hamat-white.png" alt="Hamat Al-ebda'a" className="h-10 lg:h-12 w-auto" />
           </button>
 
           <nav className="hidden xl:flex items-center gap-1" aria-label="Primary">
