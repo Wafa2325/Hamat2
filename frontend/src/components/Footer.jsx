@@ -16,7 +16,9 @@ export const Footer = () => {
       <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <img src="/assets/logo-white.png" alt="Hamat Al-ebda'a" className="h-20 w-auto" data-testid="footer-logo" />
+            <span className="inline-flex items-center justify-center rounded-2xl bg-white p-3 shadow-[0_8px_28px_rgba(0,0,0,0.3)]" data-testid="footer-logo">
+              <img src="/assets/logo-hamat-new.png" alt="Hamat Al-ebda'a" className="h-24 w-auto" />
+            </span>
             <p className="mt-5 max-w-md text-sm leading-relaxed text-purple-200/60">
               {t.footer.tagline}
             </p>

@@ -39,13 +39,17 @@ export const Preloader = () => {
           <div className="pointer-events-none absolute inset-0 opacity-[0.06] brand-pattern-light [mask-image:radial-gradient(ellipse_at_center,black_20%,transparent_70%)]" />
           <div className="pointer-events-none absolute h-[28rem] w-[28rem] rounded-full bg-fuchsia-600/15 blur-[140px]" />
 
-          <motion.img
-            src="/assets/logo-white-compact.png"
-            alt="Hamat Al-ebda'a"
+          <motion.div
             initial={{ opacity: 0, y: 12 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8 }}
-            className="relative h-14 w-auto sm:h-16"
-            data-testid="preloader-logo"
-          />
+            className="relative inline-flex items-center justify-center rounded-2xl bg-white p-3 shadow-[0_10px_40px_rgba(0,0,0,0.35)]"
+          >
+            <img
+              src="/assets/logo-hamat-new.png"
+              alt="Hamat Al-ebda'a"
+              className="h-20 w-auto sm:h-24"
+              data-testid="preloader-logo"
+            />
+          </motion.div>
           <motion.p
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.3, duration: 0.8 }}
             className="relative mt-8 text-base sm:text-lg font-semibold tracking-wide text-purple-200/80"

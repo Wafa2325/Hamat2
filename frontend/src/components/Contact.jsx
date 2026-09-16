@@ -1,11 +1,13 @@
 import { useState } from 'react';
 import axios from 'axios';
 import { toast } from 'sonner';
-import { Mail, Phone, Instagram, Send, Loader2 } from 'lucide-react';
+import { Mail, Phone, Instagram, Send, Loader2, MapPin, Navigation } from 'lucide-react';
 import { Reveal, SectionHead } from './Reveal';
 import { useLang } from '../i18n';
 
 const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const MAP_EMBED = 'https://www.google.com/maps?q=Aletqan+Square+Jeddah&output=embed';
+const MAP_DIRECTIONS = 'https://www.google.com/maps/dir/?api=1&destination=Aletqan+Square+Jeddah';
 
 export const Contact = () => {
   const { t } = useLang();
@@ -126,11 +128,37 @@ export const Contact = () => {
                       <span className="block text-sm font-semibold text-purple-100" dir="ltr">@Hamat.alebdaa</span>
                     </span>
                   </a>
+                  <a href={MAP_DIRECTIONS} target="_blank" rel="noopener noreferrer" data-testid="contact-address-link" className="group flex items-center gap-4">
+                    <span className="inline-flex h-11 w-11 shrink-0 items-center justify-center rounded-2xl bg-[#C5A16F]/15 text-[#C5A16F] transition-colors duration-300 group-hover:bg-[#C5A16F] group-hover:text-white">
+                      <MapPin className="h-5 w-5" />
+                    </span>
+                    <span>
+                      <span className="block text-xs font-bold uppercase tracking-wider text-purple-300/60">{t.contact.addressLabel}</span>
+                      <span className="block text-sm font-semibold text-purple-100">{t.contact.address}</span>
+                    </span>
+                  </a>
                 </div>
               </div>
               <div className="relative flex-1 overflow-hidden rounded-3xl border border-purple-100 shadow-[0_20px_60px_rgba(126,34,206,0.12)]">
-                <img src="/assets/citywalk-night.jpg" alt="Event venue at night" className="h-full min-h-56 w-full object-cover" data-testid="contact-image" />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#16091f]/60 to-transparent" />
+                <iframe
+                  data-testid="contact-map"
+                  title={t.contact.address}
+                  src={MAP_EMBED}
+                  className="h-full min-h-64 w-full border-0"
+                  loading="lazy"
+                  referrerPolicy="no-referrer-when-downgrade"
+                  allowFullScreen
+                />
+                <a
+                  data-testid="contact-directions-button"
+                  href={MAP_DIRECTIONS}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="absolute bottom-4 end-4 inline-flex items-center gap-2 rounded-full bg-gradient-to-l from-[#8A688A] to-fuchsia-500 px-5 py-2.5 text-xs font-bold text-white shadow-[0_12px_36px_rgba(168,85,247,0.4)] transition-transform duration-300 hover:scale-[1.04]"
+                >
+                  <Navigation className="h-3.5 w-3.5 rtl:-scale-x-100" />
+                  {t.contact.directions}
+                </a>
               </div>
             </div>
           </Reveal>
