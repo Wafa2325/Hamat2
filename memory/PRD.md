@@ -47,8 +47,14 @@ Build a premium, creative, interactive-looking static one-page bilingual (EN def
 
 - Pink + Hattrick client badges rebuilt from full source logos (were clipped by the circle); verified in /app/test_reports/iteration_2.json.
 
+## Implemented (2026-06, round 4 — targeted client edits)
+- Our Work section rebuilt with 6 real projects from the client Portfolio PPTX (original photos extracted): AROYA Cruise (1 img), Pink Cup Event (4 imgs), W2K23 Event (2 imgs), JAHEZ Event (2 imgs), Ittihad Fan Zone (4 imgs), Al-Ahli Match (1 img). Assets under `public/assets/portfolio/`.
+- Cards now show uniform LANDSCAPE 4:3 covers (object-cover, smart-cropped so no faces/people distorted). Multi-image projects show a photo-count badge and open a navigable lightbox gallery (prev/next arrows, keyboard ←/→, dot indicators). Single-image projects open a plain lightbox (no nav).
+- Contact section: added company address (Alitqan Square, Jeddah City – Office 510 / الإتقان سكوير، جدة – مكتب 510), Google Maps embed iframe (replaced decorative image), MapPin address row, and a "Get Directions / الاتجاهات" button → google maps directions URL.
+- Logo replaced everywhere (Header, Footer, Preloader) with new brand logo `public/assets/logo-hamat-new.png` (white-bg logo placed in a white rounded chip so it stays legible on dark surfaces; logo used as-is, unmodified).
+- Verified: /app/test_reports/iteration_3.json — frontend 100% pass, EN/AR both, no 404s/console errors.
+
 ## Backlog / Next
 - P0: none
-- P1: Email notification on contact form (needs Resend API key)
-- P1: Replace text client badges with official logo files if provided
-- P2: Multi-photo galleries per project (needs more photos), Google Maps embed, SEO/OpenGraph tags
+- P1: Email notification on contact form (needs Resend API key) — STILL PENDING (contact form only saves to MongoDB)
+- P2: SEO/OpenGraph tags; official Google Maps Embed API key for map reliability
