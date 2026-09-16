@@ -13,7 +13,6 @@ const PROJECTS = [
   { cover: `${B}/ittihad-cover.jpg`, images: [`${B}/ittihad-1.jpg`, `${B}/ittihad-2.jpg`, `${B}/ittihad-3.jpg`, `${B}/ittihad-4.jpg`] },
   { cover: `${B}/alahli-cover.jpg`, images: [`${B}/alahli-1.jpg`] },
   { cover: `${B}/sgs-cover.jpg`, images: [`${B}/sgs-1.jpg`] },
-  { cover: `${B}/lepure-cover.jpg`, images: [`${B}/lepure-1.jpg`] },
   { cover: `${B}/mazda-cover.jpg`, images: [`${B}/mazda-1.jpg`] },
 ];
 
